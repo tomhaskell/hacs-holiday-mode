@@ -1,4 +1,4 @@
-"""Custom types for integration_blueprint."""
+"""Custom types for holiday_mode."""
 
 from __future__ import annotations
 
@@ -9,17 +9,17 @@ if TYPE_CHECKING:
     from homeassistant.config_entries import ConfigEntry
     from homeassistant.loader import Integration
 
-    from .api import IntegrationBlueprintApiClient
+    from .api import HolidayModeApiClient
     from .coordinator import BlueprintDataUpdateCoordinator
 
 
-type IntegrationBlueprintConfigEntry = ConfigEntry[IntegrationBlueprintData]
+type HolidayModeConfigEntry = ConfigEntry[HolidayModeData]
 
 
 @dataclass
-class IntegrationBlueprintData:
+class HolidayModeData:
     """Data for the Blueprint integration."""
 
-    client: IntegrationBlueprintApiClient
+    client: HolidayModeApiClient
     coordinator: BlueprintDataUpdateCoordinator
     integration: Integration
